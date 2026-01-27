@@ -36,8 +36,18 @@ async function showRecipe() {
     renderSpinner(recipeContainer);
     const resp = await fetch('https://forkify-api.herokuapp.com/api/v2/recipes/5ed6604591c37cdc054bc886');
     const data = await resp.json();
-
     const recipe = data.data.recipe;
+    const recipeObj = {
+    id: recipe.id,
+    title: recipe.title,
+    publisher: recipe.publisher,
+    sourceUrl: recipe.source_url,
+    image: recipe.image_url,
+    servings: recipe.servings,
+    cookTime: recipe.cooking_time,
+    ingredients: recipe.ingredients,
+    };
+    
     const markup = `
         <figure class="recipe__fig">
           <img src="${recipe.image_url}" alt="Tomato" class="recipe__img" />
@@ -87,21 +97,26 @@ async function showRecipe() {
           </button>
         </div>
 
-${recipe.ingredients
-        .map(img => {
-          return `<li class="recipe__ingredient">
+        ${recipe.ingredients
+          .map(ing => {
+            return `
+            <li class="recipe__ingredient">
               <svg class="recipe__icon">
                 <use href="${icons}#icon-check"></use>
               </svg>
-              <div class="recipe__quantity">${img.quantity}</div>
+              <div class="recipe__quantity">${ing.quantity}</div>
               <div class="recipe__description">
-                <span class="recipe__unit">${img.unit}</span>
-                ${img.description}
+                <span class="recipe__unit">${ing.unit}</span>
+                ${ing.description}
               </div>
-            </li>`;
-        })
-        .join('')
-      }
+            </li>
+            `;
+          }).join('')}
+        </div>
+
+        <div class="recipe__ingredients">
+          <h2 class="heading--2">Recipe ingredients</h2>
+        </div>
 
         <div class="recipe__directions">
           <h2 class="heading--2">How to cook it</h2>
@@ -121,11 +136,14 @@ ${recipe.ingredients
             </svg>
           </a>
         </div>
-        `;
-    recipeContainer.innerHTML = markup;
+      </div>
+    </div>`;
+    recipeContainer.innerHTML = '';
+    recipeContainer.insertAdjacentHTML('afterbegin', markup);
     console.log(data);
     console.log(resp);
     console.log(recipe);
+    console.log(recipeObj);
   }
 
   catch (err) {
