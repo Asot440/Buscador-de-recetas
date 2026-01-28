@@ -717,6 +717,7 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _iconsSvg = require("url:../img/icons.svg");
 var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
+var _modelJs = require("./model.js");
 const recipeContainer = document.querySelector('.recipe');
 const timeout = function(s) {
     return new Promise(function(_, reject) {
@@ -749,11 +750,12 @@ async function showRecipe() {
     try {
         const id = window.location.hash.slice(1);
         if (!id) return;
+        await _modelJs.loadRecipe(id);
         console.log(id);
         renderSpinner(recipeContainer);
         const resp = await fetch(`https://forkify-api.herokuapp.com/api/v2/recipes/${id}`);
         const data = await resp.json();
-        const recipe = data.data.recipe;
+        const { recipe } = _modelJs.state;
         const recipeObj = {
             id: recipe.id,
             title: recipe.title,
@@ -869,7 +871,7 @@ const eventos = [
 ];
 eventos.forEach((ev)=>window.addEventListener(ev, showRecipe));
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","url:../img/icons.svg":"fd0vu"}],"jnFvT":[function(require,module,exports,__globalThis) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","url:../img/icons.svg":"fd0vu","./model.js":"3QBkH"}],"jnFvT":[function(require,module,exports,__globalThis) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -902,6 +904,38 @@ exports.export = function(dest, destName, get) {
 },{}],"fd0vu":[function(require,module,exports,__globalThis) {
 module.exports = module.bundle.resolve("icons.0809ef97.svg") + "?" + Date.now();
 
-},{}]},["appxp","7dWZ8"], "7dWZ8", "parcelRequire3a11", {}, "./", "/")
+},{}],"3QBkH":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "state", ()=>state);
+// No estoy seguro si esta funcion va aquí o en el controller.js
+parcelHelpers.export(exports, "loadRecipe", ()=>loadRecipe);
+const state = {
+    recipe: {}
+};
+async function loadRecipe(id) {
+    try {
+        const res = await fetch(`https://forkify-api.herokuapp.com/api/v2/recipes/${id}`);
+        const data = await res.json();
+        const recipe = {
+            id: data.data.recipe.id,
+            title: data.data.recipe.title,
+            publisher: data.data.recipe.publisher,
+            source_url: data.data.recipe.source_url,
+            image_url: data.data.recipe.image_url,
+            servings: data.data.recipe.servings,
+            cooking_time: data.data.recipe.cooking_time,
+            ingredients: data.data.recipe.ingredients
+        };
+        if (!res.ok) throw new Error(`${data.message} (${res.status})`);
+        state.recipe = recipe;
+        console.log(state.recipe);
+    } catch (err) {
+        console.warn(`${err} \u{1F4A5}\u{1F4A5}\u{1F4A5}`);
+        throw err;
+    }
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}]},["appxp","7dWZ8"], "7dWZ8", "parcelRequire3a11", {}, "./", "/")
 
 //# sourceMappingURL=Buscador-de-recetas.4a59a05f.js.map
