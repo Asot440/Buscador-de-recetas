@@ -1,3 +1,5 @@
+import { getJSON } from './helpers.js';
+import { API_URL } from './config.js';
 export const state = {
     recipe: {}
 };
@@ -5,9 +7,9 @@ export const state = {
 // No estoy seguro si esta funcion va aquí o en el controller.js
 export async function loadRecipe(id) {
     try {
-        const res = await fetch(`https://forkify-api.herokuapp.com/api/v2/recipes/${id}`);
-        if (!res.ok) throw new Error(`Error ${res.status}: no se pudo obtener la receta`);
-        const data = await res.json();
+        //const res = await fetch(`${API_URL}${id}`);
+        //if (!res.ok) throw new Error(`Error ${res.status}: no se pudo obtener la receta`);
+        const data = await getJSON(`${API_URL}${id}`);
         const recipe = {id: data.data.recipe.id,
         title: data.data.recipe.title,
         publisher: data.data.recipe.publisher,

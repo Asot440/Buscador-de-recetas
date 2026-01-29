@@ -1,4 +1,4 @@
-3665
+3667
 67G:\JavaScript_II\Buscador-de-recetas\node_modules\commander\typings134139582851462060 1
 67G:\JavaScript_II\Buscador-de-recetas\node_modules\@msgpackr-extract134139582720294972 1
 84G:\JavaScript_II\Buscador-de-recetas\node_modules\@swc\helpers\esm\_object_spread.js134139582815010076 0
@@ -27,7 +27,7 @@
 86G:\JavaScript_II\Buscador-de-recetas\node_modules\baseline-browser-mapping\LICENSE.txt134139582820152189 0
 90G:\JavaScript_II\Buscador-de-recetas\node_modules\@parcel\codeframe\test\codeframe.test.js134139582723370687 0
 101G:\JavaScript_II\Buscador-de-recetas\node_modules\@parcel\error-overlay\src\effects\unhandledError.js134139582732658242 0
-41G:\JavaScript_II\Buscador-de-recetas\dist134141240361443130 1
+41G:\JavaScript_II\Buscador-de-recetas\dist134141267853844988 1
 115G:\JavaScript_II\Buscador-de-recetas\node_modules\@parcel\package-manager\test\fixtures\packages\peers\package.json134139582738529798 0
 93G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\features\html5semantic.js134139582830822401 0
 76G:\JavaScript_II\Buscador-de-recetas\node_modules\@parcel\utils\src\index.js134139582785730806 0
@@ -62,7 +62,7 @@
 94G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\features\css-cross-fade.js134139582824259607 0
 95G:\JavaScript_II\Buscador-de-recetas\node_modules\@swc\helpers\_\_unsupported_iterable_to_array134139582809198961 1
 40G:\JavaScript_II\Buscador-de-recetas\src134139582885727483 1
-43G:\JavaScript_II\Buscador-de-recetas\src\js134140371418764024 1
+43G:\JavaScript_II\Buscador-de-recetas\src\js134141245391171673 1
 72G:\JavaScript_II\Buscador-de-recetas\node_modules\semver\ranges\valid.js134139582880643410 0
 101G:\JavaScript_II\Buscador-de-recetas\node_modules\@swc\helpers\src\_tagged_template_literal_loose.mjs134139582818849009 0
 95G:\JavaScript_II\Buscador-de-recetas\node_modules\lmdb\node_modules\node-addon-api\package.json134139582866434676 0
@@ -92,12 +92,31 @@
 65G:\JavaScript_II\Buscador-de-recetas\src\sass\_searchResults.scss134139582885888191 0
 94G:\JavaScript_II\Buscador-de-recetas\node_modules\@swc\helpers\esm\_interop_require_default.js134139582814645863 0
 58G:\JavaScript_II\Buscador-de-recetas\src\sass\_upload.scss134139582885938687 0
+53G:\JavaScript_II\Buscador-de-recetas\src\js\config.js134141243826051673 0
+87G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\features\portals.js134139582835186678 0
+62G:\JavaScript_II\Buscador-de-recetas\dist\favicon.8b2f57bf.png134141267457110966 0
+83G:\JavaScript_II\Buscador-de-recetas\node_modules\@parcel\core\lib\public\Bundle.js134139582724975360 0
+55G:\JavaScript_II\Buscador-de-recetas\node_modules\json5134139582855623487 1
+110G:\JavaScript_II\Buscador-de-recetas\node_modules\@parcel\core\test\fixtures\local-plugin-config-pkg\.parcelrc134139582730455895 0
+81G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\regions\BN.js134139582841442471 0
+82G:\JavaScript_II\Buscador-de-recetas\node_modules\@mischnic\json-sourcemap\LICENSE134139582720065366 0
+68G:\JavaScript_II\Buscador-de-recetas\node_modules\msgpackr\stream.js134139582870185241 0
+55G:\JavaScript_II\Buscador-de-recetas\node_modules\@lmdb134139582719068785 1
+109G:\JavaScript_II\Buscador-de-recetas\node_modules\msgpackr-extract\node_modules\detect-libc\lib\filesystem.js134139582868004906 0
+84G:\JavaScript_II\Buscador-de-recetas\node_modules\@parcel\runtime-service-worker\lib134139582746026832 1
+84G:\JavaScript_II\Buscador-de-recetas\node_modules\lmdb\dependencies\lz4\lib\xxhash.h134139582865206557 0
+54G:\JavaScript_II\Buscador-de-recetas\src\js\helpers.js134141263737674229 0
+102G:\JavaScript_II\Buscador-de-recetas\node_modules\@parcel\error-overlay\src\effects\stackTraceLimit.js134139582732638192 0
+101G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\features\css-container-queries.js134139582824069894 0
+91G:\JavaScript_II\Buscador-de-recetas\node_modules\@swc\helpers\_\_class_private_method_init134139582806209190 1
+70G:\JavaScript_II\Buscador-de-recetas\node_modules\lmdb\src\lmdb-js.cpp134139582866928157 0
+88G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\features\css-grid.js134139582825096236 0
 98G:\JavaScript_II\Buscador-de-recetas\node_modules\@parcel\runtime-js\lib\helpers\node\js-loader.js134139582744899137 0
 49G:\JavaScript_II\Buscador-de-recetas\src\js\views134140371829398192 1
 100G:\JavaScript_II\Buscador-de-recetas\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\COPYRIGHT134139582862852346 0
 104G:\JavaScript_II\Buscador-de-recetas\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\mdb.c134139582862059916 0
 102G:\JavaScript_II\Buscador-de-recetas\node_modules\lmdb\node_modules\node-addon-api\tools\conversion.js134139582866570161 0
-52G:\JavaScript_II\Buscador-de-recetas\src\js\model.js134141210842688707 0
+52G:\JavaScript_II\Buscador-de-recetas\src\js\model.js134141267852407159 0
 67G:\JavaScript_II\Buscador-de-recetas\node_modules\tslib\SECURITY.md134139582882098237 0
 89G:\JavaScript_II\Buscador-de-recetas\node_modules\@swc\helpers\_\_tagged_template_literal134139582808518657 1
 81G:\JavaScript_II\Buscador-de-recetas\node_modules\@swc\helpers\_\_super_prop_base134139582808470348 1
@@ -146,14 +165,6 @@
 75G:\JavaScript_II\Buscador-de-recetas\node_modules\node-addon-api\LICENSE.md134139582870404329 0
 77G:\JavaScript_II\Buscador-de-recetas\node_modules\@parcel\workers\lib\process134139582789916459 1
 68G:\JavaScript_II\Buscador-de-recetas\node_modules\.package-lock.json134141237264771876 0
-62G:\JavaScript_II\Buscador-de-recetas\dist\favicon.8b2f57bf.png134141240360488058 0
-83G:\JavaScript_II\Buscador-de-recetas\node_modules\@parcel\core\lib\public\Bundle.js134139582724975360 0
-55G:\JavaScript_II\Buscador-de-recetas\node_modules\json5134139582855623487 1
-110G:\JavaScript_II\Buscador-de-recetas\node_modules\@parcel\core\test\fixtures\local-plugin-config-pkg\.parcelrc134139582730455895 0
-81G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\regions\BN.js134139582841442471 0
-82G:\JavaScript_II\Buscador-de-recetas\node_modules\@mischnic\json-sourcemap\LICENSE134139582720065366 0
-68G:\JavaScript_II\Buscador-de-recetas\node_modules\msgpackr\stream.js134139582870185241 0
-55G:\JavaScript_II\Buscador-de-recetas\node_modules\@lmdb134139582719068785 1
 67G:\JavaScript_II\Buscador-de-recetas\node_modules\sass\package.json134139582874943726 0
 103G:\JavaScript_II\Buscador-de-recetas\node_modules\@parcel\runtime-js\lib\helpers\browser\wasm-loader.js134139582744750369 0
 71G:\JavaScript_II\Buscador-de-recetas\node_modules\msgpackr\iterators.js134139582869950351 0
@@ -283,13 +294,13 @@
 92G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\features\css-overflow.js134139582826217373 0
 102G:\JavaScript_II\Buscador-de-recetas\node_modules\@parcel\runtime-js\lib\helpers\worker\wasm-loader.js134139582745026833 0
 59G:\JavaScript_II\Buscador-de-recetas\node_modules\immutable134139582854533088 1
-105G:\JavaScript_II\Buscador-de-recetas\node_modules\@swc\helpers\_\_apply_decorated_descriptor\package.json134139582804855335 0
-58G:\JavaScript_II\Buscador-de-recetas\node_modules\msgpackr134139582870324365 1
 103G:\JavaScript_II\Buscador-de-recetas\node_modules\@parcel\reporter-dev-server\lib\ServerReporter.js.map134139582743482105 0
 96G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\features\css-font-palette.js134139582824862026 0
 67G:\JavaScript_II\Buscador-de-recetas\dist\Recetario.4a59a05f.js.map134139582716454497 0
 72G:\JavaScript_II\Buscador-de-recetas\node_modules\picomatch\package.json134139582873518370 0
 77G:\JavaScript_II\Buscador-de-recetas\node_modules\lightningcss-win32-x64-msvc134139582860285825 1
+105G:\JavaScript_II\Buscador-de-recetas\node_modules\@swc\helpers\_\_apply_decorated_descriptor\package.json134139582804855335 0
+58G:\JavaScript_II\Buscador-de-recetas\node_modules\msgpackr134139582870324365 1
 84G:\JavaScript_II\Buscador-de-recetas\node_modules\source-map-js\lib\binary-search.js134139582880868809 0
 66G:\JavaScript_II\Buscador-de-recetas\node_modules\msgpackr-extract134139582868418137 1
 95G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\features\custom-elements.js134139582828068216 0
@@ -396,9 +407,6 @@
 77G:\JavaScript_II\Buscador-de-recetas\node_modules\@parcel\reporter-dev-server134139582743545830 1
 65G:\JavaScript_II\Buscador-de-recetas\node_modules\clone\README.md134139582850406625 0
 74G:\JavaScript_II\Buscador-de-recetas\node_modules\weak-lru-cache\README.md134139582885040008 0
-65G:\JavaScript_II\Buscador-de-recetas\node_modules\.bin\parcel.cmd134139582717808787 0
-71G:\JavaScript_II\Buscador-de-recetas\node_modules\msgpackr\package.json134139582870117052 0
-78G:\JavaScript_II\Buscador-de-recetas\node_modules\lightningcss\node\index.d.ts134139582860806840 0
 78G:\JavaScript_II\Buscador-de-recetas\node_modules\@parcel\packager-css\LICENSE134139582738641151 0
 72G:\JavaScript_II\Buscador-de-recetas\node_modules\commander\lib\error.js134139582851203841 0
 81G:\JavaScript_II\Buscador-de-recetas\node_modules\weak-lru-cache\rollup.config.js134139582885234113 0
@@ -935,8 +943,6 @@
 109G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\features\mdn-text-decoration-shorthand.js134139582833369174 0
 70G:\JavaScript_II\Buscador-de-recetas\node_modules\node-addon-api\tools134139582871104532 1
 81G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\regions\MY.js134139582845519999 0
-95G:\JavaScript_II\Buscador-de-recetas\node_modules\@parcel\runtime-js\src\helpers\cacheLoader.js134139582745436334 0
-81G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\regions\GR.js134139582843307142 0
 68G:\JavaScript_II\Buscador-de-recetas\node_modules\sass\sass.node.mjs134139582877937285 0
 78G:\JavaScript_II\Buscador-de-recetas\node_modules\sass\types\deprecations.d.ts134139582878023499 0
 84G:\JavaScript_II\Buscador-de-recetas\node_modules\@parcel\core\lib\Transformation.js134139582724492078 0
@@ -990,9 +996,6 @@
 81G:\JavaScript_II\Buscador-de-recetas\node_modules\@parcel\workers\src\cpuCount.js134139582790436966 0
 105G:\JavaScript_II\Buscador-de-recetas\node_modules\lmdb\node_modules\node-addon-api\tools\eslint-format.js134139582866596799 0
 78G:\JavaScript_II\Buscador-de-recetas\node_modules\sass\types\value\string.d.ts134139582878922381 0
-67G:\JavaScript_II\Buscador-de-recetas\node_modules\@lezer\lr\LICENSE134139582718661812 0
-83G:\JavaScript_II\Buscador-de-recetas\node_modules\@swc\helpers\_\index\package.json134139582809486103 0
-68G:\JavaScript_II\Buscador-de-recetas\node_modules\msgpackr\README.md134139582868497327 0
 81G:\JavaScript_II\Buscador-de-recetas\node_modules\sass\types\util\promise_or.d.ts134139582878549409 0
 78G:\JavaScript_II\Buscador-de-recetas\node_modules\sass\types\logger\index.d.ts134139582878397439 0
 81G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\regions\GN.js134139582843204936 0
@@ -1244,7 +1247,6 @@
 97G:\JavaScript_II\Buscador-de-recetas\node_modules\@swc\helpers\cjs\_object_without_properties.cjs134139582811669729 0
 88G:\JavaScript_II\Buscador-de-recetas\node_modules\@swc\helpers\src\_array_with_holes.mjs134139582816482712 0
 101G:\JavaScript_II\Buscador-de-recetas\node_modules\msgpackr-extract\node_modules\detect-libc\README.md134139582867892440 0
-109G:\JavaScript_II\Buscador-de-recetas\node_modules\msgpackr-extract\node_modules\detect-libc\lib\filesystem.js134139582868004906 0
 108G:\JavaScript_II\Buscador-de-recetas\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\COPYRIGHT134139582861672231 0
 117G:\JavaScript_II\Buscador-de-recetas\node_modules\msgpackr-extract\node_modules\.bin\node-gyp-build-optional-packages134139582867564958 0
 96G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\features\css-color-adjust.js134139582823942704 0
@@ -1271,6 +1273,12 @@
 112G:\JavaScript_II\Buscador-de-recetas\node_modules\@parcel\core\test\fixtures\invalid-source-missing\package.json134139582730050135 0
 75G:\JavaScript_II\Buscador-de-recetas\node_modules\@parcel\watcher\src\macos134139582788825947 1
 66G:\JavaScript_II\Buscador-de-recetas\node_modules\msgpackr\pack.js134139582870059882 0
+65G:\JavaScript_II\Buscador-de-recetas\node_modules\.bin\parcel.cmd134139582717808787 0
+71G:\JavaScript_II\Buscador-de-recetas\node_modules\msgpackr\package.json134139582870117052 0
+78G:\JavaScript_II\Buscador-de-recetas\node_modules\lightningcss\node\index.d.ts134139582860806840 0
+67G:\JavaScript_II\Buscador-de-recetas\node_modules\@lezer\lr\LICENSE134139582718661812 0
+83G:\JavaScript_II\Buscador-de-recetas\node_modules\@swc\helpers\_\index\package.json134139582809486103 0
+68G:\JavaScript_II\Buscador-de-recetas\node_modules\msgpackr\README.md134139582868497327 0
 77G:\JavaScript_II\Buscador-de-recetas\node_modules\@parcel\events\lib\types.js134139582733404048 0
 81G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\regions\KI.js134139582844172166 0
 80G:\JavaScript_II\Buscador-de-recetas\node_modules\@parcel\core\src\AssetGraph.js134139582726343698 0
@@ -1340,13 +1348,6 @@
 81G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\regions\AS.js134139582840787476 0
 66G:\JavaScript_II\Buscador-de-recetas\node_modules\lmdb\src\env.cpp134139582866885244 0
 98G:\JavaScript_II\Buscador-de-recetas\node_modules\lmdb\node_modules\node-addon-api\tools\README.md134139582866475206 0
-84G:\JavaScript_II\Buscador-de-recetas\node_modules\@parcel\runtime-service-worker\lib134139582746026832 1
-84G:\JavaScript_II\Buscador-de-recetas\node_modules\lmdb\dependencies\lz4\lib\xxhash.h134139582865206557 0
-102G:\JavaScript_II\Buscador-de-recetas\node_modules\@parcel\error-overlay\src\effects\stackTraceLimit.js134139582732638192 0
-101G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\features\css-container-queries.js134139582824069894 0
-91G:\JavaScript_II\Buscador-de-recetas\node_modules\@swc\helpers\_\_class_private_method_init134139582806209190 1
-70G:\JavaScript_II\Buscador-de-recetas\node_modules\lmdb\src\lmdb-js.cpp134139582866928157 0
-88G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\features\css-grid.js134139582825096236 0
 68G:\JavaScript_II\Buscador-de-recetas\node_modules\lmdb\src\lmdb-js.h134139582866951599 0
 77G:\JavaScript_II\Buscador-de-recetas\node_modules\lmdb\src\ordered-binary.cpp134139582867047610 0
 70G:\JavaScript_II\Buscador-de-recetas\node_modules\ansi-styles\index.js134139582819839636 0
@@ -1643,9 +1644,9 @@
 81G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\regions\GP.js134139582843250204 0
 85G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\regions\alt-na.js134139582848518992 0
 71G:\JavaScript_II\Buscador-de-recetas\node_modules\escalade\package.json134139582853140954 0
+96G:\JavaScript_II\Buscador-de-recetas\node_modules\@swc\helpers\src\_class_private_method_get.mjs134139582817285329 0
 72G:\JavaScript_II\Buscador-de-recetas\node_modules\escalade\sync\index.js134139582853297716 0
 81G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\regions\KR.js134139582844317385 0
-96G:\JavaScript_II\Buscador-de-recetas\node_modules\@swc\helpers\src\_class_private_method_get.mjs134139582817285329 0
 90G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\features\word-break.js134139582840188474 0
 73G:\JavaScript_II\Buscador-de-recetas\node_modules\escalade\sync\index.mjs134139582853322763 0
 70G:\JavaScript_II\Buscador-de-recetas\node_modules\@parcel\reporter-cli134139582742069240 1
@@ -1711,7 +1712,7 @@
 79G:\JavaScript_II\Buscador-de-recetas\node_modules\chrome-trace-event\CHANGES.md134139582850139359 0
 74G:\JavaScript_II\Buscador-de-recetas\node_modules\commander\lib\command.js134139582851183808 0
 94G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\features\battery-status.js134139582822069431 0
-78G:\JavaScript_II\Buscador-de-recetas\dist\Buscador-de-recetas.f7626f62.css.map134141240361401533 0
+78G:\JavaScript_II\Buscador-de-recetas\dist\Buscador-de-recetas.f7626f62.css.map134141267458647252 0
 79G:\JavaScript_II\Buscador-de-recetas\node_modules\@parcel\watcher\src\Signal.hh134139582788385562 0
 81G:\JavaScript_II\Buscador-de-recetas\node_modules\commander\lib\suggestSimilar.js134139582851305593 0
 84G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\features\apng.js134139582821369023 0
@@ -1853,6 +1854,8 @@
 95G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\features\css-text-indent.js134139582827181650 0
 81G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\regions\GG.js134139582843049336 0
 81G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\regions\GI.js134139582843104400 0
+95G:\JavaScript_II\Buscador-de-recetas\node_modules\@parcel\runtime-js\src\helpers\cacheLoader.js134139582745436334 0
+81G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\regions\GR.js134139582843307142 0
 99G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\features\background-img-opts.js134139582821952331 0
 81G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\regions\GT.js134139582843344135 0
 95G:\JavaScript_II\Buscador-de-recetas\node_modules\@parcel\core\test\fixtures\library-scopehoist134139582730415632 1
@@ -1975,7 +1978,7 @@
 94G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\features\feature-policy.js134139582829429065 0
 81G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\regions\PT.js134139582846408612 0
 81G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\regions\PW.js134139582846443364 0
-52G:\JavaScript_II\Buscador-de-recetas\dist\index.html134141240360279660 0
+52G:\JavaScript_II\Buscador-de-recetas\dist\index.html134141267458128111 0
 87G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\features\fileapi.js134139582829515755 0
 81G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\regions\QA.js134139582846498296 0
 81G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\regions\RE.js134139582846539622 0
@@ -2299,7 +2302,7 @@
 92G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\features\font-loading.js134139582829901741 0
 83G:\JavaScript_II\Buscador-de-recetas\node_modules\@swc\helpers\cjs\_ts_decorate.cjs134139582812457129 0
 98G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\features\font-unicode-range.js134139582829997352 0
-59G:\JavaScript_II\Buscador-de-recetas\dist\logo.726d37a8.png134141240360259509 0
+59G:\JavaScript_II\Buscador-de-recetas\dist\logo.726d37a8.png134141267457144400 0
 92G:\JavaScript_II\Buscador-de-recetas\node_modules\@parcel\core\src\requests\DevDepRequest.js134139582727798257 0
 103G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\features\font-variant-alternates.js134139582830039033 0
 87G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\features\wasm-gc.js134139582838807144 0
@@ -2320,7 +2323,6 @@
 99G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\features\http-live-streaming.js134139582830854496 0
 85G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\features\http2.js134139582830892283 0
 95G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\features\iframe-seamless.js134139582830993762 0
-98G:\JavaScript_II\Buscador-de-recetas\node_modules\@swc\helpers\src\_class_private_field_update.mjs134139582817255357 0
 95G:\JavaScript_II\Buscador-de-recetas\node_modules\@parcel\transformer-svg\lib\SVGTransformer.js134139582781797914 0
 101G:\JavaScript_II\Buscador-de-recetas\node_modules\@swc\helpers\esm\_class_extract_field_descriptor.js134139582813556531 0
 93G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\features\iframe-srcdoc.js134139582831018826 0
@@ -2444,7 +2446,6 @@
 95G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\features\payment-request.js134139582834829758 0
 95G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\features\permissions-api.js134139582834902529 0
 87G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\features\picture.js134139582834998882 0
-87G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\features\portals.js134139582835186678 0
 100G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\features\prefers-color-scheme.js134139582835216751 0
 93G:\JavaScript_II\Buscador-de-recetas\node_modules\@parcel\core\test\fixtures\config\.parcelrc134139582729504435 0
 92G:\JavaScript_II\Buscador-de-recetas\node_modules\@parcel\core\test\fixtures\parcel\other.js134139582730951617 0
@@ -2452,7 +2453,7 @@
 95G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\features\promise-finally.js134139582835319144 0
 97G:\JavaScript_II\Buscador-de-recetas\node_modules\@swc\helpers\_\_async_to_generator\package.json134139582805249817 0
 89G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\features\proximity.js134139582835370390 0
-73G:\JavaScript_II\Buscador-de-recetas\dist\Buscador-de-recetas.4a59a05f.js134141240360938886 0
+73G:\JavaScript_II\Buscador-de-recetas\dist\Buscador-de-recetas.4a59a05f.js134141267853705772 0
 93G:\JavaScript_II\Buscador-de-recetas\node_modules\caniuse-lite\data\features\readonly-attr.js134139582835541093 0
 71G:\JavaScript_II\Buscador-de-recetas\node_modules\@swc\types\index.d.ts134139582819691518 0
 99G:\JavaScript_II\Buscador-de-recetas\node_modules\@parcel\types-internal\src\DependencySpecifier.js134139582782545746 0
@@ -2705,7 +2706,7 @@
 76G:\JavaScript_II\Buscador-de-recetas\node_modules\@swc\helpers\src\index.mjs134139582819487444 0
 89G:\JavaScript_II\Buscador-de-recetas\node_modules\@swc\helpers\src\_apply_decs_2203_r.mjs134139582816442903 0
 91G:\JavaScript_II\Buscador-de-recetas\node_modules\@swc\helpers\src\_array_without_holes.mjs134139582816517825 0
-60G:\JavaScript_II\Buscador-de-recetas\dist\icons.21bad73c.svg134141240361231838 0
+60G:\JavaScript_II\Buscador-de-recetas\dist\icons.21bad73c.svg134141267458438048 0
 95G:\JavaScript_II\Buscador-de-recetas\node_modules\@swc\helpers\src\_assert_this_initialized.mjs134139582816548597 0
 92G:\JavaScript_II\Buscador-de-recetas\node_modules\@swc\helpers\src\_class_name_tdz_error.mjs134139582817044697 0
 88G:\JavaScript_II\Buscador-de-recetas\node_modules\@parcel\transformer-sass\src\modern.js134139582781713666 0
@@ -2718,6 +2719,7 @@
 102G:\JavaScript_II\Buscador-de-recetas\node_modules\@swc\helpers\src\_class_extract_field_descriptor.mjs134139582817005977 0
 95G:\JavaScript_II\Buscador-de-recetas\node_modules\@swc\helpers\esm\_async_generator_delegate.js134139582813150517 0
 95G:\JavaScript_II\Buscador-de-recetas\node_modules\@swc\helpers\src\_class_private_field_set.mjs134139582817223810 0
+98G:\JavaScript_II\Buscador-de-recetas\node_modules\@swc\helpers\src\_class_private_field_update.mjs134139582817255357 0
 97G:\JavaScript_II\Buscador-de-recetas\node_modules\@swc\helpers\src\_class_private_method_init.mjs134139582817316084 0
 96G:\JavaScript_II\Buscador-de-recetas\node_modules\@swc\helpers\src\_class_private_method_set.mjs134139582817350568 0
 110G:\JavaScript_II\Buscador-de-recetas\node_modules\@swc\helpers\src\_class_static_private_field_destructure.mjs134139582817369314 0
@@ -3653,14 +3655,14 @@
 100G:\JavaScript_II\Buscador-de-recetas\node_modules\.bin\node-gyp-build-optional-packages-optional.cmd134139582717557369 0
 100G:\JavaScript_II\Buscador-de-recetas\node_modules\.bin\node-gyp-build-optional-packages-optional.ps1134139582717592941 0
 59G:\JavaScript_II\Buscador-de-recetas\node_modules\.bin\sass134139582717894939 0
-74G:\JavaScript_II\Buscador-de-recetas\dist\Buscador-de-recetas.f7626f62.css134141240361322798 0
+74G:\JavaScript_II\Buscador-de-recetas\dist\Buscador-de-recetas.f7626f62.css134141267458548420 0
 63G:\JavaScript_II\Buscador-de-recetas\node_modules\.bin\sass.cmd134139582717923478 0
 63G:\JavaScript_II\Buscador-de-recetas\node_modules\.bin\sass.ps1134139582717953957 0
 65G:\JavaScript_II\Buscador-de-recetas\node_modules\.bin\semver.cmd134139582718024924 0
 80G:\JavaScript_II\Buscador-de-recetas\dist\Aplicacion presupuesto.3464ddca.js.map134139582716200779 0
 76G:\JavaScript_II\Buscador-de-recetas\dist\Aplicacion_Presupuesto.4a59a05f.js134139582716245279 0
 77G:\JavaScript_II\Buscador-de-recetas\dist\Aplicacion_Presupuesto.f7626f62.css134139582716353243 0
-77G:\JavaScript_II\Buscador-de-recetas\dist\Buscador-de-recetas.4a59a05f.js.map134141240361082343 0
+77G:\JavaScript_II\Buscador-de-recetas\dist\Buscador-de-recetas.4a59a05f.js.map134141267853779783 0
 60G:\JavaScript_II\Buscador-de-recetas\dist\icons.0809ef97.svg134139594536782333 0
-60G:\JavaScript_II\Buscador-de-recetas\dist\icons.7bd9dd61.svg134141240361036958 0
+60G:\JavaScript_II\Buscador-de-recetas\dist\icons.7bd9dd61.svg134141267457491046 0
 63G:\JavaScript_II\Buscador-de-recetas\dist\Recetario.4a59a05f.js134139582716416464 0

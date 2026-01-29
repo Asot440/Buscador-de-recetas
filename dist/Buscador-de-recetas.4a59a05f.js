@@ -799,14 +799,16 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "state", ()=>state);
 // No estoy seguro si esta funcion va aquí o en el controller.js
 parcelHelpers.export(exports, "loadRecipe", ()=>loadRecipe);
+var _helpersJs = require("./helpers.js");
+var _configJs = require("./config.js");
 const state = {
     recipe: {}
 };
 async function loadRecipe(id) {
     try {
-        const res = await fetch(`https://forkify-api.herokuapp.com/api/v2/recipes/${id}`);
-        if (!res.ok) throw new Error(`Error ${res.status}: no se pudo obtener la receta`);
-        const data = await res.json();
+        //const res = await fetch(`${API_URL}${id}`);
+        //if (!res.ok) throw new Error(`Error ${res.status}: no se pudo obtener la receta`);
+        const data = await (0, _helpersJs.getJSON)(`${(0, _configJs.API_URL)}${id}`);
         const recipe = {
             id: data.data.recipe.id,
             title: data.data.recipe.title,
@@ -823,6 +825,27 @@ async function loadRecipe(id) {
         throw err;
     }
 }
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","./helpers.js":"7nL9P","./config.js":"2hPh4"}],"7nL9P":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "getJSON", ()=>getJSON);
+async function getJSON(url) {
+    try {
+        const res = await fetch(url);
+        const data = await res.json();
+        if (!res.ok) throw new Error(`Error ${res.status}: no se pudo obtener la receta`);
+        return data;
+    } catch (err) {
+        throw err;
+    }
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"2hPh4":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "API_URL", ()=>API_URL);
+const API_URL = "https://forkify-api.herokuapp.com/api/v2/recipes/";
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"dfIpa":[function(require,module,exports,__globalThis) {
 //import { recipeContainer } from '../controller.js';
