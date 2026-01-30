@@ -1,5 +1,8 @@
 import * as model from './model.js';
 import RecipeView from './views/RecipeView.js';
+import searchViews from './views/searchViews.js';
+import ResultsView from './views/ResultView.js';
+
 //export const recipeContainer = document.querySelector('.recipe');
 const timeout = function (s) {
   return new Promise(function (_, reject) {
@@ -43,10 +46,32 @@ async function controlRecipes() {
   }
 
   catch (err) {
-    console.error(`${err} !!!!`);
+    RecipeView.renderError();
+    throw err;
   }
 
 }
 
-const eventos = ['hashchange', 'load'];
-eventos.forEach(ev => window.addEventListener(ev, controlRecipes));
+const init = function () {
+  RecipeView.addHandlerRender(controlRecipes);
+  searchViews.addhandlerSearch(controlSearchResults);
+};
+init();
+
+async function controlSearchResults(query) {
+  try {
+    query = searchViews.getQuery();
+    if (!query) return;
+    await model.loadSearchResults(query);
+    console.log(model.state.search.results);
+    ResultsView.renderSpinner(model.state.search.results);
+    ResultsView.render(model.state.search.results);
+}
+  catch (err) {
+    console.error(`${err} 💥💥💥`);
+    throw err;
+  }
+}
+//controlSearchResults("pizza");
+
+

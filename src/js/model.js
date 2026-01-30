@@ -1,7 +1,11 @@
 import { getJSON } from './helpers.js';
 import { API_URL } from './config.js';
 export const state = {
-    recipe: {}
+    recipe: {},
+    search: {
+        query: '',
+        results: [],
+    },
 };
 
 // No estoy seguro si esta funcion va aquí o en el controller.js
@@ -18,9 +22,32 @@ export async function loadRecipe(id) {
         servings: data.data.recipe.servings,
         cooking_time: data.data.recipe.cooking_time,
         ingredients: data.data.recipe.ingredients,
+        search: {
+            query: '',
+            results: []
+        }
         };
         
         state.recipe = recipe;
+    }
+    catch (err) {
+        console.error(`${err} 💥💥💥`);
+        throw err;
+    }
+}
+
+export async function loadSearchResults(query) {
+    try {
+        state.search.query = query;
+        const data = await getJSON(`${API_URL}/?search=${query}`);
+        state.search.results = data.data.recipes.map(rec => {
+            return {
+                id: rec.id,
+                title: rec.title,
+                publisher: rec.publisher,
+                image_url: rec.image_url,
+            };
+        });
     }
     catch (err) {
         console.error(`${err} 💥💥💥`);
