@@ -774,7 +774,7 @@ async function controlSearchResults(query) {
         await _modelJs.loadSearchResults(query);
         console.log(_modelJs.state.search.results);
         (0, _resultViewJsDefault.default).renderSpinner(_modelJs.state.search.results);
-        (0, _resultViewJsDefault.default).render(_modelJs.state.search.results);
+        (0, _resultViewJsDefault.default).render(_modelJs.getSearchResultsPage());
     } catch (err) {
         console.error(`${err} \u{1F4A5}\u{1F4A5}\u{1F4A5}`);
         throw err;
@@ -818,13 +818,16 @@ parcelHelpers.export(exports, "state", ()=>state);
 // No estoy seguro si esta funcion va aquí o en el controller.js
 parcelHelpers.export(exports, "loadRecipe", ()=>loadRecipe);
 parcelHelpers.export(exports, "loadSearchResults", ()=>loadSearchResults);
+parcelHelpers.export(exports, "getSearchResultsPage", ()=>getSearchResultsPage);
 var _helpersJs = require("./helpers.js");
 var _configJs = require("./config.js");
 const state = {
     recipe: {},
     search: {
         query: '',
-        results: []
+        results: [],
+        page: 1,
+        resultsPerPage: (0, _configJs.RES_PER_PAGE)
     }
 };
 async function loadRecipe(id) {
@@ -869,6 +872,12 @@ async function loadSearchResults(query) {
         throw err;
     }
 }
+function getSearchResultsPage(page = state.search.page) {
+    page = state.search.page;
+    const start = (page - 1) * state.search.resultsPerPage;
+    const end = page * state.search.resultsPerPage;
+    return state.search.results.slice(start, end);
+}
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","./helpers.js":"7nL9P","./config.js":"2hPh4"}],"7nL9P":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -898,8 +907,10 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "API_URL", ()=>API_URL);
 parcelHelpers.export(exports, "TIMEOUT_SEC", ()=>TIMEOUT_SEC);
+parcelHelpers.export(exports, "RES_PER_PAGE", ()=>RES_PER_PAGE);
 const API_URL = "https://forkify-api.herokuapp.com/api/v2/recipes/";
 const TIMEOUT_SEC = 5;
+const RES_PER_PAGE = 10;
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"dfIpa":[function(require,module,exports,__globalThis) {
 //import { recipeContainer } from '../controller.js';

@@ -65,7 +65,7 @@ async function controlSearchResults(query) {
     await model.loadSearchResults(query);
     console.log(model.state.search.results);
     ResultsView.renderSpinner(model.state.search.results);
-    ResultsView.render(model.state.search.results);
+    ResultsView.render(model.getSearchResultsPage());
 }
   catch (err) {
     console.error(`${err} 💥💥💥`);
