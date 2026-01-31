@@ -2,8 +2,8 @@ import * as model from './model.js';
 import RecipeView from './views/RecipeView.js';
 import searchViews from './views/searchViews.js';
 import ResultsView from './views/ResultView.js';
+import paginationView from './views/paginationView.js';
 
-//export const recipeContainer = document.querySelector('.recipe');
 const timeout = function (s) {
   return new Promise(function (_, reject) {
     setTimeout(function () {
@@ -15,26 +15,6 @@ const timeout = function (s) {
 // https://forkify-api.herokuapp.com/v2
 
 ///////////////////////////////////////
-
-//Esto al parecer ya no se usa, mas adelante lo comento para hacer pruebas.
-/*function renderSpinner(parentEl) {
-  const markup = `<div class="spinner">
-          <svg>
-            <use href="${icons}#icon-loader"></use>
-          </svg>
-        </div> -->
-
-        <!-- <div class="error">
-            <div>
-              <svg>
-                <use href="${icons}#icon-alert-triangle"></use>
-              </svg>
-            </div>
-            <p>No recipes found for your query. Please try again!</p>
-          </div>`;
-  parentEl.innerHTML = '';
-  parentEl.insertAdjacentHTML('afterbegin', markup);
-}//Hasta aqui*/
 
 async function controlRecipes() {
   try {
@@ -52,9 +32,15 @@ async function controlRecipes() {
 
 }
 
+const controlPagination = function (goToPage) {
+  ResultsView.render(model.getSearchResultsPage(goToPage));
+  paginationView.render(model.state.search);
+}
+
 const init = function () {
   RecipeView.addHandlerRender(controlRecipes);
   searchViews.addhandlerSearch(controlSearchResults);
+  paginationView._addHandlerClick(controlPagination);
 };
 init();
 
@@ -66,12 +52,10 @@ async function controlSearchResults(query) {
     console.log(model.state.search.results);
     ResultsView.renderSpinner(model.state.search.results);
     ResultsView.render(model.getSearchResultsPage());
+    paginationView.render(model.state.search);
 }
   catch (err) {
     console.error(`${err} 💥💥💥`);
     throw err;
   }
 }
-//controlSearchResults("pizza");
-
-

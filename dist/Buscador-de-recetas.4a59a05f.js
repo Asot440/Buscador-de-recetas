@@ -722,7 +722,8 @@ var _searchViewsJs = require("./views/searchViews.js");
 var _searchViewsJsDefault = parcelHelpers.interopDefault(_searchViewsJs);
 var _resultViewJs = require("./views/ResultView.js");
 var _resultViewJsDefault = parcelHelpers.interopDefault(_resultViewJs);
-//export const recipeContainer = document.querySelector('.recipe');
+var _paginationViewJs = require("./views/paginationView.js");
+var _paginationViewJsDefault = parcelHelpers.interopDefault(_paginationViewJs);
 const timeout = function(s) {
     return new Promise(function(_, reject) {
         setTimeout(function() {
@@ -732,25 +733,7 @@ const timeout = function(s) {
 };
 // https://forkify-api.herokuapp.com/v2
 ///////////////////////////////////////
-//Esto al parecer ya no se usa, mas adelante lo comento para hacer pruebas.
-/*function renderSpinner(parentEl) {
-  const markup = `<div class="spinner">
-          <svg>
-            <use href="${icons}#icon-loader"></use>
-          </svg>
-        </div> -->
-
-        <!-- <div class="error">
-            <div>
-              <svg>
-                <use href="${icons}#icon-alert-triangle"></use>
-              </svg>
-            </div>
-            <p>No recipes found for your query. Please try again!</p>
-          </div>`;
-  parentEl.innerHTML = '';
-  parentEl.insertAdjacentHTML('afterbegin', markup);
-}//Hasta aqui*/ async function controlRecipes() {
+async function controlRecipes() {
     try {
         const id = window.location.hash.slice(1);
         if (!id) return;
@@ -762,9 +745,14 @@ const timeout = function(s) {
         throw err;
     }
 }
+const controlPagination = function(goToPage) {
+    (0, _resultViewJsDefault.default).render(_modelJs.getSearchResultsPage(goToPage));
+    (0, _paginationViewJsDefault.default).render(_modelJs.state.search);
+};
 const init = function() {
     (0, _recipeViewJsDefault.default).addHandlerRender(controlRecipes);
     (0, _searchViewsJsDefault.default).addhandlerSearch(controlSearchResults);
+    (0, _paginationViewJsDefault.default)._addHandlerClick(controlPagination);
 };
 init();
 async function controlSearchResults(query) {
@@ -775,13 +763,14 @@ async function controlSearchResults(query) {
         console.log(_modelJs.state.search.results);
         (0, _resultViewJsDefault.default).renderSpinner(_modelJs.state.search.results);
         (0, _resultViewJsDefault.default).render(_modelJs.getSearchResultsPage());
+        (0, _paginationViewJsDefault.default).render(_modelJs.state.search);
     } catch (err) {
         console.error(`${err} \u{1F4A5}\u{1F4A5}\u{1F4A5}`);
         throw err;
     }
-} //controlSearchResults("pizza");
+}
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","./model.js":"3QBkH","./views/RecipeView.js":"dfIpa","./views/searchViews.js":"Es71q","./views/ResultView.js":"gzics"}],"jnFvT":[function(require,module,exports,__globalThis) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","./model.js":"3QBkH","./views/RecipeView.js":"dfIpa","./views/searchViews.js":"Es71q","./views/ResultView.js":"gzics","./views/paginationView.js":"7NIiB"}],"jnFvT":[function(require,module,exports,__globalThis) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -815,7 +804,6 @@ exports.export = function(dest, destName, get) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "state", ()=>state);
-// No estoy seguro si esta funcion va aquí o en el controller.js
 parcelHelpers.export(exports, "loadRecipe", ()=>loadRecipe);
 parcelHelpers.export(exports, "loadSearchResults", ()=>loadSearchResults);
 parcelHelpers.export(exports, "getSearchResultsPage", ()=>getSearchResultsPage);
@@ -832,8 +820,6 @@ const state = {
 };
 async function loadRecipe(id) {
     try {
-        //const res = await fetch(`${API_URL}${id}`);
-        //if (!res.ok) throw new Error(`Error ${res.status}: no se pudo obtener la receta`);
         const data = await (0, _helpersJs.getJSON)(`${(0, _configJs.API_URL)}${id}`);
         const recipe = {
             id: data.data.recipe.id,
@@ -873,7 +859,7 @@ async function loadSearchResults(query) {
     }
 }
 function getSearchResultsPage(page = state.search.page) {
-    page = state.search.page;
+    state.search.page = page;
     const start = (page - 1) * state.search.resultsPerPage;
     const end = page * state.search.resultsPerPage;
     return state.search.results.slice(start, end);
@@ -913,13 +899,10 @@ const TIMEOUT_SEC = 5;
 const RES_PER_PAGE = 10;
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"dfIpa":[function(require,module,exports,__globalThis) {
-//import { recipeContainer } from '../controller.js';
-//import {renderSpinner} from '../controller.js';
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _fracty = require("fracty");
 var _fractyDefault = parcelHelpers.interopDefault(_fracty);
-//import icons from '../../img/icons.svg';
 var _viewJs = require("./View.js");
 const icons = new URL(require("a0b82650a605f976"));
 class RecipeView extends (0, _viewJs.View) {
@@ -1171,7 +1154,6 @@ function returnStrings(den, num, integer, type) {
 },{}],"jSw21":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-//import icons from '../../img/icons.svg';
 parcelHelpers.export(exports, "View", ()=>View);
 const icons = new URL(require("fcd5427331ff87b4"));
 class View {
@@ -1259,7 +1241,6 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _view = require("./View");
 const icons = new URL(require("f9519dc12fff8a96"));
-//import icons from '../../img/icons.svg';
 class ResultsView extends (0, _view.View) {
     _parentElement = document.querySelector('.results');
     _errorMessage = 'No recipes found for your query! Please try again.';
@@ -1289,6 +1270,59 @@ class ResultsView extends (0, _view.View) {
 }
 exports.default = new ResultsView();
 
-},{"./View":"jSw21","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","f9519dc12fff8a96":"aob6l"}]},["appxp","7dWZ8"], "7dWZ8", "parcelRequire3a11", {}, "./", "/")
+},{"./View":"jSw21","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","f9519dc12fff8a96":"aob6l"}],"7NIiB":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _view = require("./View");
+const icons = new URL(require("d937d4480f9ab689"));
+class PaginationView extends (0, _view.View) {
+    _parentElement = document.querySelector('.pagination');
+    _addHandlerClick(handler) {
+        this._parentElement.addEventListener('click', function(e) {
+            const btn = e.target.closest('.btn--inline');
+            if (!btn) return;
+            const goToPage = +btn.dataset.goto;
+            handler(goToPage);
+        });
+    }
+    _generateMarkup() {
+        const curPage = this._data.page;
+        const numPages = Math.ceil(this._data.results.length / this._data.resultsPerPage);
+        if (curPage === 1 && numPages > 1) return `
+            <button class="btn--inline pagination__btn--next" data-goto="${curPage + 1}">
+            <span>Page ${curPage + 1}</span>
+            <svg class="search__icon">
+            <use href="${icons}#icon-arrow-right"></use>
+            </svg>
+            </button>
+        `;
+        if (curPage === numPages && numPages > 1) return `
+            <button class="btn--inline pagination__btn--prev" data-goto="${curPage - 1}">
+            <svg class="search__icon">
+            <use href="${icons}#icon-arrow-left"></use>
+            </svg>
+            <span>Page ${curPage - 1}</span>
+            </button>
+        `;
+        if (curPage > 1 && curPage < numPages) return `
+            <button class="btn--inline pagination__btn--prev" data-goto="${curPage - 1}">
+            <svg class="search__icon">
+            <use href="${icons}#icon-arrow-left"></use>
+            </svg>
+            <span>Page ${curPage - 1}</span>
+            </button>
+            <button class="btn--inline pagination__btn--next" data-goto="${curPage + 1}">
+            <span>Page ${curPage + 1}</span>
+            <svg class="search__icon">
+            <use href="${icons}#icon-arrow-right"></use>
+            </svg>
+            </button>
+        `;
+        return '';
+    }
+}
+exports.default = new PaginationView();
+
+},{"./View":"jSw21","d937d4480f9ab689":"aob6l","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}]},["appxp","7dWZ8"], "7dWZ8", "parcelRequire3a11", {}, "./", "/")
 
 //# sourceMappingURL=Buscador-de-recetas.4a59a05f.js.map
