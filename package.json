@@ -8,7 +8,7 @@
   "source": "index.html",
   "scripts": {
     "start": "npx parcel index.html",
-    "build": "node ./node_modules/parcel/bin.js build index.html"
+    "build": "node ./node_modules/parcel/lib/bin.js build index.html"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.16.3",
