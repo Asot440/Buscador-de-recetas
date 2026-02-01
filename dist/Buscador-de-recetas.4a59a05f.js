@@ -903,10 +903,9 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _fracty = require("fracty");
 var _fractyDefault = parcelHelpers.interopDefault(_fracty);
-//const icons = new URL('../../img/icons.svg', import.meta.url).href;
-var _iconsSvg = require("url:../../img/icons.svg");
-var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
+//import icons from 'url:../../img/icons.svg';
 var _viewJs = require("./View.js");
+const icons = new URL(require("a0b82650a605f976")).href;
 class RecipeView extends (0, _viewJs.View) {
     _parentElement = document.querySelector('.recipe');
     _errorMessage = "We could not find that recipe. Please try another one!";
@@ -933,14 +932,14 @@ class RecipeView extends (0, _viewJs.View) {
         <div class="recipe__details">
         <div class="recipe__info">
             <svg class="recipe__info-icon">
-            <use href="${0, _iconsSvgDefault.default}#icon-clock"></use>
+            <use href="${icons}#icon-clock"></use>
             </svg>
             <span class="recipe__info-data recipe__info-data--minutes">${this._data.cooking_time}</span>
             <span class="recipe__info-text">minutes</span>
         </div>
         <div class="recipe__info">
             <svg class="recipe__info-icon">
-            <use href="${0, _iconsSvgDefault.default}#icon-users"></use>
+            <use href="${icons}#icon-users"></use>
             </svg>
             <span class="recipe__info-data recipe__info-data--people">${this._data.servings}</span>
             <span class="recipe__info-text">servings</span>
@@ -948,12 +947,12 @@ class RecipeView extends (0, _viewJs.View) {
             <div class="recipe__info-buttons">
             <button class="btn--tiny btn--increase-servings">
                 <svg>
-                <use href="${0, _iconsSvgDefault.default}#icon-minus-circle"></use>
+                <use href="${icons}#icon-minus-circle"></use>
                 </svg>
             </button>
             <button class="btn--tiny btn--increase-servings">
                 <svg>
-                <use href="${0, _iconsSvgDefault.default}#icon-plus-circle"></use>
+                <use href="${icons}#icon-plus-circle"></use>
                 </svg>
             </button>
             </div>
@@ -961,12 +960,12 @@ class RecipeView extends (0, _viewJs.View) {
 
         <div class="recipe__user-generated">
             <svg>
-            <use href="${0, _iconsSvgDefault.default}#icon-user"></use>
+            <use href="${icons}#icon-user"></use>
             </svg>
         </div>
         <button class="btn--round">
             <svg class="">
-            <use href="${0, _iconsSvgDefault.default}#icon-bookmark-fill"></use>
+            <use href="${icons}#icon-bookmark-fill"></use>
             </svg>
         </button>
         </div>
@@ -992,7 +991,7 @@ class RecipeView extends (0, _viewJs.View) {
         >
             <span>Directions</span>
             <svg class="search__icon">
-            <use href="${0, _iconsSvgDefault.default}#icon-arrow-right"></use>
+            <use href="${icons}#icon-arrow-right"></use>
             </svg>
         </a>
         </div>
@@ -1003,7 +1002,7 @@ class RecipeView extends (0, _viewJs.View) {
         return `
         <li class="recipe__ingredient">
         <svg class="recipe__icon">
-        <use href="${0, _iconsSvgDefault.default}#icon-check"></use>
+        <use href="${icons}#icon-check"></use>
         </svg>
         <div class="recipe__quantity">${ing.quantity ? (0, _fractyDefault.default)(ing.quantity) : ''}</div>
         <div class="recipe__description">
@@ -1017,7 +1016,7 @@ class RecipeView extends (0, _viewJs.View) {
         const markup = `
     <div class="spinner">
         <svg>
-        <use href="${(0, _iconsSvgDefault.default)}#icon-loader"></use>
+        <use href="${icons}#icon-loader"></use>
         </svg>
     </div>
     `;
@@ -1035,7 +1034,7 @@ class RecipeView extends (0, _viewJs.View) {
         const markup = `<div class="error">
         <div>
         <svg>
-            <use href="${(0, _iconsSvgDefault.default)}#icon-alert-triangle"></use>
+            <use href="${icons}#icon-alert-triangle"></use>
         </svg>
         </div>
         <p>${message}</p>
@@ -1047,7 +1046,7 @@ class RecipeView extends (0, _viewJs.View) {
         const markup = `<div class="error">
         <div>
         <svg>
-            <use href="${(0, _iconsSvgDefault.default)}#icon-smile"></use>
+            <use href="${icons}#icon-smile"></use>
         </svg>
         </div>
         <p>${message}</p>
@@ -1058,7 +1057,7 @@ class RecipeView extends (0, _viewJs.View) {
 }
 exports.default = new RecipeView();
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","fracty":"gsPKI","./View.js":"jSw21","url:../../img/icons.svg":"fd0vu"}],"gsPKI":[function(require,module,exports,__globalThis) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","fracty":"gsPKI","./View.js":"jSw21","a0b82650a605f976":"aob6l"}],"gsPKI":[function(require,module,exports,__globalThis) {
 // FRACTY CONVERTS DECIMAL NUMBERS TO FRACTIONS BY ASSUMING THAT TRAILING PATTERNS FROM 10^-2 CONTINUE TO REPEAT
 // The assumption is based on the most standard numbering conventions
 // e.g. 3.51 will convert to 3 51/100 while 3.511 will convert to 3 23/45
@@ -1154,12 +1153,11 @@ function returnStrings(den, num, integer, type) {
 }
 
 },{}],"jSw21":[function(require,module,exports,__globalThis) {
-//const icons = new URL('../../img/icons.svg', import.meta.url).href;
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
+//import icons from 'url:../../img/icons.svg';
 parcelHelpers.export(exports, "View", ()=>View);
-var _iconsSvg = require("url:../../img/icons.svg");
-var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
+const icons = new URL(require("fcd5427331ff87b4")).href;
 class View {
     _data;
     render(data) {
@@ -1176,7 +1174,7 @@ class View {
         const markup = `
         <div class="spinner">
             <svg>
-            <use href="${(0, _iconsSvgDefault.default)}#icon-loader"></use>
+            <use href="${icons}#icon-loader"></use>
             </svg>
         </div>
         `;
@@ -1187,7 +1185,7 @@ class View {
         const markup = `<div class="error">
             <div>
             <svg>
-                <use href="${(0, _iconsSvgDefault.default)}#icon-alert-triangle"></use>
+                <use href="${icons}#icon-alert-triangle"></use>
             </svg>
             </div>
             <p>${message}</p>
@@ -1199,7 +1197,7 @@ class View {
         const markup = `<div class="error">
         <div>
         <svg>
-            <use href="${(0, _iconsSvgDefault.default)}#icon-smile"></use>
+            <use href="${icons}#icon-smile"></use>
         </svg>
         </div>
         <p>${message}</p>
@@ -1209,8 +1207,8 @@ class View {
     }
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","url:../../img/icons.svg":"fd0vu"}],"fd0vu":[function(require,module,exports,__globalThis) {
-module.exports = module.bundle.resolve("icons.0809ef97.svg") + "?" + Date.now();
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","fcd5427331ff87b4":"aob6l"}],"aob6l":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("icons.7bd9dd61.svg") + "?" + Date.now();
 
 },{}],"Es71q":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -1244,9 +1242,8 @@ exports.default = new SearchView();
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _view = require("./View");
-//const icons = new URL('../../img/icons.svg', import.meta.url).href;
-var _iconsSvg = require("url:../../img/icons.svg");
-var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
+const icons = new URL(require("f9519dc12fff8a96")).href;
+//import icons from 'url:../../img/icons.svg';
 class ResultsView extends (0, _view.View) {
     _parentElement = document.querySelector('.results');
     _errorMessage = 'No recipes found for your query! Please try again.';
@@ -1266,7 +1263,7 @@ class ResultsView extends (0, _view.View) {
             <p class="preview__publisher">${result.publisher}</p>
             <div class="preview__user-generated">
                 <svg>
-                <use href="${0, _iconsSvgDefault.default}#icon-user"></use>
+                <use href="${icons}#icon-user"></use>
                 </svg>
             </div>
             </div>
@@ -1276,13 +1273,12 @@ class ResultsView extends (0, _view.View) {
 }
 exports.default = new ResultsView();
 
-},{"./View":"jSw21","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","url:../../img/icons.svg":"fd0vu"}],"7NIiB":[function(require,module,exports,__globalThis) {
+},{"./View":"jSw21","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","f9519dc12fff8a96":"aob6l"}],"7NIiB":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _view = require("./View");
-//const icons = new URL('../../img/icons.svg', import.meta.url).href;
-var _iconsSvg = require("url:../../img/icons.svg");
-var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
+const icons = new URL(require("d937d4480f9ab689")).href;
+//import icons from 'url:../../img/icons.svg';
 class PaginationView extends (0, _view.View) {
     _parentElement = document.querySelector('.pagination');
     _addHandlerClick(handler) {
@@ -1300,14 +1296,14 @@ class PaginationView extends (0, _view.View) {
             <button class="btn--inline pagination__btn--next" data-goto="${curPage + 1}">
             <span>Page ${curPage + 1}</span>
             <svg class="search__icon">
-            <use href="${0, _iconsSvgDefault.default}#icon-arrow-right"></use>
+            <use href="${icons}#icon-arrow-right"></use>
             </svg>
             </button>
         `;
         if (curPage === numPages && numPages > 1) return `
             <button class="btn--inline pagination__btn--prev" data-goto="${curPage - 1}">
             <svg class="search__icon">
-            <use href="${0, _iconsSvgDefault.default}#icon-arrow-left"></use>
+            <use href="${icons}#icon-arrow-left"></use>
             </svg>
             <span>Page ${curPage - 1}</span>
             </button>
@@ -1315,14 +1311,14 @@ class PaginationView extends (0, _view.View) {
         if (curPage > 1 && curPage < numPages) return `
             <button class="btn--inline pagination__btn--prev" data-goto="${curPage - 1}">
             <svg class="search__icon">
-            <use href="${0, _iconsSvgDefault.default}#icon-arrow-left"></use>
+            <use href="${icons}#icon-arrow-left"></use>
             </svg>
             <span>Page ${curPage - 1}</span>
             </button>
             <button class="btn--inline pagination__btn--next" data-goto="${curPage + 1}">
             <span>Page ${curPage + 1}</span>
             <svg class="search__icon">
-            <use href="${0, _iconsSvgDefault.default}#icon-arrow-right"></use>
+            <use href="${icons}#icon-arrow-right"></use>
             </svg>
             </button>
         `;
@@ -1331,6 +1327,6 @@ class PaginationView extends (0, _view.View) {
 }
 exports.default = new PaginationView();
 
-},{"./View":"jSw21","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","url:../../img/icons.svg":"fd0vu"}]},["appxp","7dWZ8"], "7dWZ8", "parcelRequire3a11", {}, "./", "/")
+},{"./View":"jSw21","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","d937d4480f9ab689":"aob6l"}]},["appxp","7dWZ8"], "7dWZ8", "parcelRequire3a11", {}, "./", "/")
 
 //# sourceMappingURL=Buscador-de-recetas.4a59a05f.js.map
