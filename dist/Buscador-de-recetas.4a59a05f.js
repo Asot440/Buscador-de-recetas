@@ -177,7 +177,7 @@
 
   // Only insert newRequire.load when it is actually used.
   // The code in this file is linted against ES5, so dynamic import is not allowed.
-  function $parcel$resolve(url) {  url = importMap[url] || url;  return import.meta.resolve(distDir + url);}newRequire.resolve = $parcel$resolve;
+  // INSERT_LOAD_HERE
 
   Object.defineProperty(newRequire, 'root', {
     get: function () {
@@ -903,9 +903,10 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _fracty = require("fracty");
 var _fractyDefault = parcelHelpers.interopDefault(_fracty);
-//import icons from '../img/icons.svg';
 var _viewJs = require("./View.js");
-const icons = new URL(require("a0b82650a605f976")).href;
+//const icons = new URL('../../img/icons.svg', import.meta.url).href;
+//import icons from '../img/icons.svg';
+const icons = '/icons.svg';
 class RecipeView extends (0, _viewJs.View) {
     _parentElement = document.querySelector('.recipe');
     _errorMessage = "We could not find that recipe. Please try another one!";
@@ -1057,7 +1058,7 @@ class RecipeView extends (0, _viewJs.View) {
 }
 exports.default = new RecipeView();
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","fracty":"gsPKI","./View.js":"jSw21","a0b82650a605f976":"aob6l"}],"gsPKI":[function(require,module,exports,__globalThis) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","fracty":"gsPKI","./View.js":"jSw21"}],"gsPKI":[function(require,module,exports,__globalThis) {
 // FRACTY CONVERTS DECIMAL NUMBERS TO FRACTIONS BY ASSUMING THAT TRAILING PATTERNS FROM 10^-2 CONTINUE TO REPEAT
 // The assumption is based on the most standard numbering conventions
 // e.g. 3.51 will convert to 3 51/100 while 3.511 will convert to 3 23/45
@@ -1153,11 +1154,12 @@ function returnStrings(den, num, integer, type) {
 }
 
 },{}],"jSw21":[function(require,module,exports,__globalThis) {
+//const icons = new URL('../../img/icons.svg', import.meta.url).href;
+//import icons from '../img/icons.svg';
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-//import icons from '../img/icons.svg';
 parcelHelpers.export(exports, "View", ()=>View);
-const icons = new URL(require("fcd5427331ff87b4")).href;
+const icons = '/icons.svg';
 class View {
     _data;
     render(data) {
@@ -1207,10 +1209,7 @@ class View {
     }
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","fcd5427331ff87b4":"aob6l"}],"aob6l":[function(require,module,exports,__globalThis) {
-module.exports = module.bundle.resolve("icons.7bd9dd61.svg") + "?" + Date.now();
-
-},{}],"Es71q":[function(require,module,exports,__globalThis) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"Es71q":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 class SearchView {
@@ -1242,8 +1241,9 @@ exports.default = new SearchView();
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _view = require("./View");
-const icons = new URL(require("f9519dc12fff8a96")).href;
+//const icons = new URL('../../img/icons.svg', import.meta.url).href;
 //import icons from '../img/icons.svg';
+const icons = '/icons.svg';
 class ResultsView extends (0, _view.View) {
     _parentElement = document.querySelector('.results');
     _errorMessage = 'No recipes found for your query! Please try again.';
@@ -1273,11 +1273,12 @@ class ResultsView extends (0, _view.View) {
 }
 exports.default = new ResultsView();
 
-},{"./View":"jSw21","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","f9519dc12fff8a96":"aob6l"}],"7NIiB":[function(require,module,exports,__globalThis) {
+},{"./View":"jSw21","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"7NIiB":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _view = require("./View");
-const icons = new URL(require("d937d4480f9ab689")).href;
+const icons = '/icons.svg';
+//const icons = new URL('../../img/icons.svg', import.meta.url).href;
 //import icons from '../img/icons.svg';
 class PaginationView extends (0, _view.View) {
     _parentElement = document.querySelector('.pagination');
@@ -1327,6 +1328,6 @@ class PaginationView extends (0, _view.View) {
 }
 exports.default = new PaginationView();
 
-},{"./View":"jSw21","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","d937d4480f9ab689":"aob6l"}]},["appxp","7dWZ8"], "7dWZ8", "parcelRequire3a11", {}, "./", "/")
+},{"./View":"jSw21","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}]},["appxp","7dWZ8"], "7dWZ8", "parcelRequire3a11", {})
 
 //# sourceMappingURL=Buscador-de-recetas.4a59a05f.js.map
