@@ -1,6 +1,7 @@
 import { View } from "./View";
-const icons = new URL('../../img/icons.svg', import.meta.url).href;
+//const icons = new URL('../../img/icons.svg', import.meta.url).href;
 //import icons from '../img/icons.svg';
+const icons = '/icons.svg';
 
 class ResultsView extends View {
     _parentElement = document.querySelector('.results');

@@ -1,5 +1,6 @@
 import { View } from "./View";
-const icons = new URL('../../img/icons.svg', import.meta.url).href;
+const icons = '/icons.svg';
+//const icons = new URL('../../img/icons.svg', import.meta.url).href;
 //import icons from '../img/icons.svg';
 
 class PaginationView extends View {
