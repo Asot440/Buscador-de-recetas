@@ -1,7 +1,8 @@
 import fracty from 'fracty';
+import icons from 'url:../../public/icons.svg';
 //const icons = new URL('../../img/icons.svg', import.meta.url).href;
 //import icons from '../img/icons.svg';
-const icons = '/icons.svg';
+//const icons = '/icons.svg';
 import { View } from './View.js';
 
 class RecipeView extends View {
