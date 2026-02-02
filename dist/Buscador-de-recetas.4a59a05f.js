@@ -903,7 +903,7 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _fracty = require("fracty");
 var _fractyDefault = parcelHelpers.interopDefault(_fracty);
-//import icons from 'url:../../img/icons.svg';
+//import icons from '../img/icons.svg';
 var _viewJs = require("./View.js");
 const icons = new URL(require("a0b82650a605f976")).href;
 class RecipeView extends (0, _viewJs.View) {
@@ -1155,7 +1155,7 @@ function returnStrings(den, num, integer, type) {
 },{}],"jSw21":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-//import icons from 'url:../../img/icons.svg';
+//import icons from '../img/icons.svg';
 parcelHelpers.export(exports, "View", ()=>View);
 const icons = new URL(require("fcd5427331ff87b4")).href;
 class View {
@@ -1243,7 +1243,7 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _view = require("./View");
 const icons = new URL(require("f9519dc12fff8a96")).href;
-//import icons from 'url:../../img/icons.svg';
+//import icons from '../img/icons.svg';
 class ResultsView extends (0, _view.View) {
     _parentElement = document.querySelector('.results');
     _errorMessage = 'No recipes found for your query! Please try again.';
@@ -1278,7 +1278,7 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _view = require("./View");
 const icons = new URL(require("d937d4480f9ab689")).href;
-//import icons from 'url:../../img/icons.svg';
+//import icons from '../img/icons.svg';
 class PaginationView extends (0, _view.View) {
     _parentElement = document.querySelector('.pagination');
     _addHandlerClick(handler) {
